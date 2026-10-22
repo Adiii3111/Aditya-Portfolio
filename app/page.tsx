@@ -9,6 +9,7 @@ import Lab from "./components/Lab";
 import PulseChain from "./components/PulseChain";
 import Zoomable from "./components/Zoomable";
 import Toolkit from "./components/Toolkit";
+import LivingCanvas from "./components/LivingCanvas";
 import ContactLauncher from "./components/ContactLauncher";
 import { community, mercuryCapabilities, otherRoles, paper, person, vaxxinova } from "./content";
 
@@ -30,7 +31,7 @@ export default function Home() {
       <main>
         {/* 01 — HERO */}
         <section id="top" data-theme="dark" className="hero">
-          <div className="hero-backdrop" aria-hidden="true" />
+          <div className="hero-backdrop" aria-hidden="true"><LivingCanvas mode="helix" /></div>
 
           <div className="hero-grid">
             <div className="hero-text">
@@ -46,7 +47,7 @@ export default function Home() {
             </div>
             <figure className="hero-portrait">
               <div className="portrait-frame"><img src="/images/aditya-kadlabal-sripad.jpg" alt="Portrait of Aditya Kadlabal Sripad in a navy suit and tie" /></div>
-              <figcaption><span>M.S. Engineering Management</span><span>Northeastern University · 2026</span></figcaption>
+              <figcaption><strong className="portrait-name">{person.fullName}</strong><span>M.S. Engineering Management</span><span>Northeastern University · 2026</span></figcaption>
             </figure>
           </div>
 
@@ -228,7 +229,7 @@ export default function Home() {
 
         {/* 13 — CONTACT */}
         <section id="contact" data-theme="dark" className="chapter dark contact">
-          <div className="contact-backdrop" aria-hidden="true" />
+          <div className="contact-backdrop" aria-hidden="true"><LivingCanvas mode="sphere" /></div>
           <p className="chapter-label reveal"><span>13</span>The next chapter</p>
           <h2 className="contact-title reveal">Let’s build <em>what’s next.</em></h2>
           <p className="lede reveal">Exploring full-time opportunities in healthcare, life sciences, supply chain, and analytics beginning in early 2027.</p>

@@ -145,12 +145,13 @@ html[data-intro="done"] .intro { display: none; }
 .portrait-frame::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; border: 1px solid #C5A57280; border-radius: 30px; opacity: 0; animation: fade 1.2s ease calc(var(--hd) + .5s) forwards; }
 .portrait-frame::after { content: ""; position: absolute; inset: 0; border-radius: 26px; background: linear-gradient(180deg, #0B142326 0%, transparent 35%, transparent 65%, #0B1423a6 100%); pointer-events: none; opacity: 0; animation: fade 1s ease calc(var(--hd) + 1s) forwards; }
 .portrait-frame img { position: relative; width: 100%; height: 100%; object-fit: cover; object-position: 50% 24%; border-radius: 26px; box-shadow: 0 40px 80px -30px #000c; filter: saturate(.92) contrast(1.02); clip-path: inset(100% 0 0 0 round 26px); animation: unveil 1.4s cubic-bezier(.7, 0, .2, 1) calc(var(--hd) + .05s) forwards; }
-.hero-portrait figcaption { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 26px; text-align: center; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--stone); opacity: 0; animation: fade 1s ease calc(var(--hd) + .8s) forwards; }
+.portrait-name { display: block; margin-bottom: 6px; font: 500 24px/1.15 var(--serif); letter-spacing: .01em; text-transform: none; color: var(--ivory); }
+.hero-portrait figcaption { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 34px; text-align: center; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--stone); opacity: 0; animation: fade 1s ease calc(var(--hd) + .8s) forwards; }
 
 .pulse-chain { padding: 6px 0 24px; opacity: 0; animation: fade 1s ease calc(var(--hd) + .7s) forwards; }
 .pulse-chain svg { display: block; width: 100%; height: 46px; overflow: visible; }
 .pc-base { fill: none; stroke: #F4F0E82e; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
-.pc-pulse { fill: none; stroke: url(#pulseGrad); stroke-width: 2; stroke-linecap: round; vector-effect: non-scaling-stroke; stroke-dasharray: .09 .91; stroke-dashoffset: 1; filter: drop-shadow(0 0 4px #E2CDA4aa); animation: pulseRun 4s ease-in-out calc(var(--hd) + 1s) 1 forwards; }
+.pc-pulse { fill: none; stroke: url(#pulseGrad); stroke-width: 2; stroke-linecap: round; vector-effect: non-scaling-stroke; stroke-dasharray: .09 .91; stroke-dashoffset: 1; filter: drop-shadow(0 0 4px #E2CDA4aa); animation: pulseRun 6s cubic-bezier(.45,.05,.55,.95) calc(var(--hd) + 1s) infinite; }
 .pc-node { fill: var(--navy); stroke: var(--gold); stroke-width: 1.4; vector-effect: non-scaling-stroke; }
 .pulse-chain ul { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); margin-top: 8px; }
 .pulse-chain li { text-align: center; font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--stone); }
@@ -158,6 +159,7 @@ html[data-intro="done"] .intro { display: none; }
 
 /* Opening + closing: clean and minimal — deep navy, one soft gold glow, fine film grain. Nothing moves. */
 .hero-backdrop, .contact-backdrop { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.living-canvas { position: absolute; inset: 0; display: block; }
 .hero-backdrop { background:
     radial-gradient(ellipse 34% 46% at 77% 46%, #C5A57230 0%, #C5A57214 40%, transparent 72%),
     radial-gradient(ellipse 60% 70% at 80% 40%, #17284299 0%, transparent 70%),
@@ -166,7 +168,7 @@ html[data-intro="done"] .intro { display: none; }
     radial-gradient(ellipse 40% 55% at 78% 62%, #C5A57224 0%, #C5A5720f 45%, transparent 75%),
     radial-gradient(ellipse 60% 60% at 15% 30%, #17284266 0%, transparent 70%),
     linear-gradient(180deg, #0B1423 0%, #09111D 100%); }
-.hero-backdrop::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle, #C5A57266 1.1px, transparent 1.6px); background-size: 24px 24px; background-position: center; -webkit-mask-image: radial-gradient(ellipse 38% 58% at 77% 48%, #000 0%, rgba(0,0,0,.5) 45%, transparent 80%); mask-image: radial-gradient(ellipse 38% 58% at 77% 48%, #000 0%, rgba(0,0,0,.5) 45%, transparent 80%); }
+.hero-backdrop::before { content: ""; position: absolute; inset: 0; opacity: .55; background-image: radial-gradient(circle, #C5A57266 1.1px, transparent 1.6px); background-size: 24px 24px; background-position: center; -webkit-mask-image: radial-gradient(ellipse 38% 58% at 77% 48%, #000 0%, rgba(0,0,0,.5) 45%, transparent 80%); mask-image: radial-gradient(ellipse 38% 58% at 77% 48%, #000 0%, rgba(0,0,0,.5) 45%, transparent 80%); }
 .hero-backdrop::after, .contact-backdrop::after { content: ""; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27220%27 height=%27220%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%27.85%27 numOctaves=%272%27 stitchTiles=%27stitch%27/%3E%3CfeColorMatrix values=%270 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23n)%27/%3E%3C/svg%3E"); background-size: 220px; opacity: .06; mix-blend-mode: overlay; }
 
 /* ═════════════════════ 02 About ═════════════════════ */

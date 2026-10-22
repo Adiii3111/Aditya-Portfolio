@@ -71,7 +71,7 @@ export const chapters: {
     kind: "Education",
     title: "Northeastern University",
     body: "Master of Science in Engineering Management — bringing together analytics, supply chains, and healthcare systems.",
-    photo: { src: "/images/boston-first-days.jpg", alt: "Aditya in a grey hoodie and fanny pack on a tree-lined path in Boston", caption: "First days in the U.S. · Boston", position: "52% 35%" },
+    photo: { src: "/images/boston-first-days.jpg", alt: "Aditya in sunglasses, a grey hoodie and a fanny pack walking a tree-lined path in Boston", caption: "First days in the U.S. · Boston", position: "45% 40%" },
     details: [
       { label: "Degree", value: "M.S., Engineering Management" },
       { label: "GPA", value: "3.71 / 4.00" },
