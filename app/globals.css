@@ -416,7 +416,7 @@ html[data-intro="done"] .intro { display: none; }
 
 /* ═════════════════════ 11 Contact ═════════════════════ */
 .contact { overflow: hidden; isolation: isolate; padding-bottom: 32px; }
-.contact-title { max-width: none !important; font-size: clamp(52px, 8.4vw, 132px) !important; line-height: .98 !important; }
+.contact-title { max-width: none !important; font-size: clamp(42px, 5.4vw, 86px) !important; line-height: 1.02 !important; }
 .contact-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
 .contact-emails { display: flex; flex-wrap: wrap; gap: 14px 40px; margin-top: 30px; }
 .contact-emails dt { margin-bottom: 4px; font-size: 10px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }

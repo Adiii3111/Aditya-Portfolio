@@ -1,10 +1,10 @@
 // An illustrated "postcard" for the Willmar, Minnesota chapter (no photo from there):
-// lake country at dusk — pines, a lake, a water tower — with the co-op's world in it:
+// lakes at dusk — pines, a lake, a water tower — with the co-op's world in it:
 // a cold-chain truck on the road and a planning dashboard glowing in a window.
 
 export default function WillmarArt() {
   return (
-    <svg className="willmar-art" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of Willmar, Minnesota: a lake at dusk with pine trees, a water tower, and a refrigerated truck on the road">
+    <svg className="willmar-art" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of Willmar, Minnesota — the Land of 10,000 Lakes: a lake at dusk with pine trees, a water tower, and a refrigerated truck on the road">
       <defs>
         <linearGradient id="wm-sky" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#0B1423" />
@@ -96,7 +96,7 @@ export default function WillmarArt() {
       {/* postcard label */}
       <g transform="translate(24 560)">
         <text fill="#F4F0E8" fontSize="22" fontFamily="var(--font-serif), Georgia, serif" fontStyle="italic">Willmar, Minnesota</text>
-        <text y="18" fill="#C5A572" fontSize="8" fontWeight="600" letterSpacing="2" fontFamily="var(--font-sans), sans-serif">LAKE COUNTRY · JAN — AUG 2026</text>
+        <text y="18" fill="#C5A572" fontSize="8" fontWeight="600" letterSpacing="2" fontFamily="var(--font-sans), sans-serif">LAND OF 10,000 LAKES · JAN — AUG 2026</text>
       </g>
     </svg>
   );

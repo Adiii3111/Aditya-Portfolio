@@ -36,7 +36,7 @@ export default function Home() {
           <div className="hero-grid">
             <div className="hero-text">
               <p className="hero-name">{person.fullName}</p>
-              <h1>Curiosity builds the path. <em>Purpose drives the journey.</em></h1>
+              <h1>Curiosity builds the Path. <em>Ambition drives the Journey.</em></h1>
               <p className="hero-roles">{person.roles.map((r) => <span key={r}>{r}.</span>)}</p>
               <p className="hero-copy">I’m Aditya Kadlabal Sripad — an engineer, researcher, and community builder connecting healthcare, supply chains, analytics, and the power of persistence.</p>
               <div className="hero-actions">

@@ -104,7 +104,7 @@ export const chapters: {
     place: "Willmar, Minnesota",
     kind: "Industry",
     title: "From analysis to action",
-    art: { kind: "willmar", caption: "Lake country · Willmar, Minnesota" },
+    art: { kind: "willmar", caption: "Land of 10,000 Lakes · Willmar, Minnesota" },
     body: "Data Analyst Co-op at Vaxxinova US, building Project MERCURY — a Python-based supply chain decision-assist dashboard — and starting a running group with colleagues.",
   },
   {
