@@ -4,6 +4,8 @@ Personal portfolio of **Aditya Kadlabal Sripad**, engineer, researcher, and anal
 
 From Bengaluru to Boston — and beyond.
 
+**Live site:** https://adiii3111.github.io/Aditya-Portfolio/
+
 ## What's inside
 
 - **Journey** — an interactive map from Bengaluru to Boston to Willmar, Minnesota

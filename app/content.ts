@@ -1,4 +1,5 @@
 // All public-facing copy lives here so facts can be reviewed in one place.
+import { asset } from "./lib/asset";
 
 export const person = {
   fullName: "Aditya Kadlabal Sripad",
@@ -48,7 +49,7 @@ export const chapters: {
     kind: "Education",
     title: "R.V. College of Engineering",
     body: "Bachelor of Engineering in Industrial Engineering and Management. Four years of learning how systems are designed, measured, and improved.",
-    photo: { src: "/images/rvce-graduation.jpg", alt: "Aditya in a light-blue blazer and blue tie at his RVCE graduation", caption: "RVCE graduation · Bengaluru", position: "50% 25%" },
+    photo: { src: asset("/images/rvce-graduation.jpg"), alt: "Aditya in a light-blue blazer and blue tie at his RVCE graduation", caption: "RVCE graduation · Bengaluru", position: "50% 25%" },
     details: [
       { label: "Degree", value: "B.E., Industrial Engineering & Management" },
       { label: "Graduated", value: "August 2023" },
@@ -71,7 +72,7 @@ export const chapters: {
     kind: "Education",
     title: "Northeastern University",
     body: "Master of Science in Engineering Management — bringing together analytics, supply chains, and healthcare systems.",
-    photo: { src: "/images/boston-first-days.jpg", alt: "Aditya in sunglasses, a grey hoodie and a fanny pack walking a tree-lined path in Boston", caption: "First days in the U.S. · Boston", position: "45% 40%" },
+    photo: { src: asset("/images/boston-first-days.jpg"), alt: "Aditya in sunglasses, a grey hoodie and a fanny pack walking a tree-lined path in Boston", caption: "First days in the U.S. · Boston", position: "45% 40%" },
     details: [
       { label: "Degree", value: "M.S., Engineering Management" },
       { label: "GPA", value: "3.71 / 4.00" },
@@ -96,7 +97,7 @@ export const chapters: {
     kind: "Research",
     title: "Research with purpose",
     body: "Built a FlexSim discrete-event simulation of a multi-echelon blood supply chain, which became a co-authored paper with K. R. Chilkuri and Professor Tugce Martagan — accepted at the Winter Simulation Conference, December 2026.",
-    photo: { src: "/images/boston-winter.jpg", alt: "Aditya in a red winter jacket at an ice rink in Boston at night", caption: "Winter in Boston", position: "50% 40%" },
+    photo: { src: asset("/images/boston-winter.jpg"), alt: "Aditya in a red winter jacket at an ice rink in Boston at night", caption: "Winter in Boston", position: "50% 40%" },
   },
   {
     when: "Jan — Aug 2026",

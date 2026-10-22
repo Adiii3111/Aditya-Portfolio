@@ -10,6 +10,7 @@ import PulseChain from "./components/PulseChain";
 import Zoomable from "./components/Zoomable";
 import Toolkit from "./components/Toolkit";
 import LivingCanvas from "./components/LivingCanvas";
+import { asset } from "./lib/asset";
 import ContactLauncher from "./components/ContactLauncher";
 import { community, mercuryCapabilities, otherRoles, paper, person, vaxxinova } from "./content";
 
@@ -46,7 +47,7 @@ export default function Home() {
               </div>
             </div>
             <figure className="hero-portrait">
-              <div className="portrait-frame"><img src="/images/aditya-kadlabal-sripad.jpg" alt="Portrait of Aditya Kadlabal Sripad in a navy suit and tie" /></div>
+              <div className="portrait-frame"><img src={asset("/images/aditya-kadlabal-sripad.jpg")} alt="Portrait of Aditya Kadlabal Sripad in a navy suit and tie" /></div>
               <figcaption><strong className="portrait-name">{person.fullName}</strong><span>M.S. Engineering Management</span><span>Northeastern University · 2026</span></figcaption>
             </figure>
           </div>
@@ -155,11 +156,11 @@ export default function Home() {
           <ChapterHead n="08" label="AgileFlowSprinter" title={<>Move together. <em>Grow together.</em></>} lede="A running and wellness community I founded — built on consistency, resilience, and the belief that every step counts." />
           <div className="afs-grid">
             <figure className="afs-photo reveal">
-              <Zoomable src="/images/sprint-sync-2024-group.jpg" alt="AgileFlowSprinter runners together after the first Sprint Sync Marathon in Bengaluru" caption="The first Sprint Sync Marathon · 21 January 2024 · Ullal Lake, Bengaluru" />
+              <Zoomable src={asset("/images/sprint-sync-2024-group.jpg")} alt="AgileFlowSprinter runners together after the first Sprint Sync Marathon in Bengaluru" caption="The first Sprint Sync Marathon · 21 January 2024 · Ullal Lake, Bengaluru" />
               <figcaption><span>Where it began</span>The first Sprint Sync Marathon</figcaption>
             </figure>
             <div className="afs-side reveal">
-              <div className="afs-logo"><img src="/images/afs-logo-mark.png" alt="AgileFlowSprinter winged emblem" /></div>
+              <div className="afs-logo"><img src={asset("/images/afs-logo-mark.png")} alt="AgileFlowSprinter winged emblem" /></div>
               <p className="afs-mission">Inspiring people to embrace running as a lifestyle — combining energy and momentum with discipline, resilience, and self-transformation.</p>
               <ul className="afs-list">
                 <li>Weekly group runs for all levels</li>
@@ -177,11 +178,11 @@ export default function Home() {
               <p>An early milestone for the community. The spirit continued at Northeastern and through a running group started with colleagues at Vaxxinova.</p>
             </div>
             <figure className="afs-poster reveal">
-              <Zoomable src="/images/sprint-sync-2024-poster.jpg" alt="Sprint Sync Marathon poster: 21 January 2024, Ullal Lake, Bengaluru — 5K, 10K, 21K" caption="The original Sprint Sync Marathon poster · 2024" />
+              <Zoomable src={asset("/images/sprint-sync-2024-poster.jpg")} alt="Sprint Sync Marathon poster: 21 January 2024, Ullal Lake, Bengaluru — 5K, 10K, 21K" caption="The original Sprint Sync Marathon poster · 2024" />
               <figcaption><span>2024</span>The first race poster</figcaption>
             </figure>
             <figure className="afs-poster reveal">
-              <Zoomable src="/images/agileflowsprinter-poster.jpg" alt="AgileFlowSprinter poster with mission, vision, activities and events" caption="AgileFlowSprinter today — mission, vision, activities and events" />
+              <Zoomable src={asset("/images/agileflowsprinter-poster.jpg")} alt="AgileFlowSprinter poster with mission, vision, activities and events" caption="AgileFlowSprinter today — mission, vision, activities and events" />
               <figcaption><span>Today</span>Mission &amp; vision</figcaption>
             </figure>
           </div>
