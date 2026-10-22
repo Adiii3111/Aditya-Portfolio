@@ -141,9 +141,9 @@ html[data-intro="done"] .intro { display: none; }
 
 .hero-portrait { justify-self: end; width: min(420px, 100%); }
 .portrait-frame { position: relative; aspect-ratio: 4 / 5; }
-.portrait-frame::before { content: ""; position: absolute; inset: -12px; border: 1px solid #C5A57266; border-radius: 50%; opacity: 0; animation: fade 1.2s ease calc(var(--hd) + .5s) forwards; }
-.portrait-frame::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(180deg, #0B142326 0%, transparent 35%, transparent 65%, #0B1423a6 100%); pointer-events: none; opacity: 0; animation: fade 1s ease calc(var(--hd) + 1s) forwards; }
-.portrait-frame img { position: relative; width: 100%; height: 100%; object-fit: cover; object-position: 50% 26%; border-radius: 50%; filter: saturate(.92) contrast(1.02); clip-path: inset(100% 0 0 0 round 50%); animation: unveil 1.4s cubic-bezier(.7, 0, .2, 1) calc(var(--hd) + .05s) forwards; }
+.portrait-frame::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; border: 1px solid #C5A57280; border-radius: 30px; opacity: 0; animation: fade 1.2s ease calc(var(--hd) + .5s) forwards; }
+.portrait-frame::after { content: ""; position: absolute; inset: 0; border-radius: 26px; background: linear-gradient(180deg, #0B142326 0%, transparent 35%, transparent 65%, #0B1423a6 100%); pointer-events: none; opacity: 0; animation: fade 1s ease calc(var(--hd) + 1s) forwards; }
+.portrait-frame img { position: relative; width: 100%; height: 100%; object-fit: cover; object-position: 50% 24%; border-radius: 26px; box-shadow: 0 40px 80px -30px #000c; filter: saturate(.92) contrast(1.02); clip-path: inset(100% 0 0 0 round 26px); animation: unveil 1.4s cubic-bezier(.7, 0, .2, 1) calc(var(--hd) + .05s) forwards; }
 .hero-portrait figcaption { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 26px; text-align: center; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--stone); opacity: 0; animation: fade 1s ease calc(var(--hd) + .8s) forwards; }
 
 .pulse-chain { padding: 6px 0 24px; opacity: 0; animation: fade 1s ease calc(var(--hd) + .7s) forwards; }
@@ -165,6 +165,7 @@ html[data-intro="done"] .intro { display: none; }
     radial-gradient(ellipse 40% 55% at 78% 62%, #C5A57224 0%, #C5A5720f 45%, transparent 75%),
     radial-gradient(ellipse 60% 60% at 15% 30%, #17284266 0%, transparent 70%),
     linear-gradient(180deg, #0B1423 0%, #09111D 100%); }
+.hero-backdrop::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle, #C5A57266 1.1px, transparent 1.6px); background-size: 24px 24px; background-position: center; -webkit-mask-image: radial-gradient(ellipse 38% 58% at 77% 48%, #000 0%, rgba(0,0,0,.5) 45%, transparent 80%); mask-image: radial-gradient(ellipse 38% 58% at 77% 48%, #000 0%, rgba(0,0,0,.5) 45%, transparent 80%); }
 .hero-backdrop::after, .contact-backdrop::after { content: ""; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27220%27 height=%27220%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%27.85%27 numOctaves=%272%27 stitchTiles=%27stitch%27/%3E%3CfeColorMatrix values=%270 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23n)%27/%3E%3C/svg%3E"); background-size: 220px; opacity: .06; mix-blend-mode: overlay; }
 
 /* ═════════════════════ 02 About ═════════════════════ */
@@ -462,7 +463,7 @@ html[data-intro="done"] .intro { display: none; }
 @keyframes drawPx { to { stroke-dashoffset: 0; } }
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
-@keyframes unveil { to { clip-path: inset(0 0 0 0 round 50%); } }
+@keyframes unveil { to { clip-path: inset(0 0 0 0 round 26px); } }
 @keyframes introOut { to { opacity: 0; visibility: hidden; } }
 @keyframes letterbox { from { height: 50vh; } to { height: 9vh; } }
 @keyframes landIn { to { opacity: .28; } }
@@ -488,6 +489,7 @@ html[data-intro="done"] .intro { display: none; }
   .hero { padding-top: 96px; }
   .hero-grid { grid-template-columns: 1fr; gap: 44px; padding-bottom: 50px; }
   .hero-portrait { justify-self: center; width: min(280px, 70%); order: -1; }
+  .hero-backdrop::before { -webkit-mask-image: radial-gradient(ellipse 70% 30% at 50% 24%, #000 0%, transparent 80%); mask-image: radial-gradient(ellipse 70% 30% at 50% 24%, #000 0%, transparent 80%); }
   .hero-backdrop { background: radial-gradient(ellipse 70% 32% at 50% 24%, #C5A5722e 0%, #C5A57210 45%, transparent 75%), linear-gradient(180deg, #0D1729 0%, #0B1423 60%, #09111D 100%); }
   .contact-backdrop { background: radial-gradient(ellipse 80% 40% at 50% 70%, #C5A5721c 0%, transparent 75%), linear-gradient(180deg, #0B1423 0%, #09111D 100%); }
   .hero h1 { font-size: clamp(40px, 10vw, 64px); }
